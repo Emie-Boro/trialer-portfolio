@@ -19,18 +19,18 @@ const ContactPage = () => {
           <h1 className="text-justify">I’m interested in job role, internships and/or freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</h1>
           <div className="border p-5 mt-8 lg:2/4 sm:mt-12">
             <h3 className="mb-2 text-white font-semibold">Message me here</h3>
-            <span className="hover:text-primary">
-              <i className="bi bi-envelope mr-1"></i>boro2dev@gmail.com
-            </span> <br />
-            <span className="hover:text-primary">
-              <i className="bi bi-twitter mr-1"></i><Link href={'https://twitter.com/trialerjs'} target="_blank">Trialer.js</Link>
-            </span> <br />
-            <span className="hover:text-primary">
-              <i className="bi bi-instagram mr-1"></i><Link href={'https://www.instagram.com/trialerjs/'} target="_blank">Trialer.js</Link>
-            </span><br />
-            <span className="hover:text-primary">
+            <div className="hover:text-primary">
+              <i className="bi bi-envelope lg:mr-1"></i>boro2dev@gmail.com
+            </div> <br />
+            <div className="hover:text-primary">
+              <i className="bi bi-twitter lg:mr-1"></i><Link href={'https://twitter.com/trialerjs'} target="_blank">Trialer.js</Link>
+            </div> <br />
+            <div className="hover:text-primary">
+              <i className="bi bi-instagram lg:mr-1"></i><Link href={'https://www.instagram.com/trialerjs/'} target="_blank">Trialer.js</Link>
+            </div><br />
+            <div className="hover:text-primary">
               <Link href={'https://www.linkedin.com/in/emiedonmokumo-dick-boro-a191a0269/'} className="hover:text-primary"><i className="bi bi-linkedin"></i> Emiedonmokumo Dick-Boro</Link>
-            </span>
+            </div>
           </div>
         </div>
       </div>

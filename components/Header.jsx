@@ -22,13 +22,13 @@ const Header = () => {
                     <div className="lg:hidden">
                         <button className="" onClick={() => setShowMenu(!showMenu)}>
                             <span className="block bg-primary w-6 h-0.5 mb-1"></span>
-                            <span className={`block bg-primary h-0.5 mb-1 ${showMenu ? 'w-6' : 'w-4'}`}></span>
-                            <span className="block bg-primary w-2 h-0.5"></span>
+                            <span className={`block bg-primary h-0.5 mb-1 my-1 ${showMenu ? 'w-4' : 'w-6'}`}></span>
+                            <span className="block bg-primary w-6 h-0.5"></span>
                         </button>
                     </div>
                 </div>
                 <div>
-                    <ul className="sm:hidden flex sm:flex-col">
+                    <ul className="sm:hidden flex md:hidden">
                         <li className="mr-3"><Link href={'/'}><span className="text-primary">#</span>Home</Link></li>
                         <li className="mr-3"><Link href={'/projects'}><span className="text-primary">#</span>projects</Link></li>
                         <li className="mr-3"><Link href={'/about'}><span className="text-primary">#</span>about-me</Link></li>

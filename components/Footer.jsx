@@ -7,7 +7,7 @@ const Footer = () => {
             <hr className="mt-12" />
             <footer className="container mx-auto p-5">
                 <div className="">
-                    <div className="flex lg:justify-between sm:flex-col">
+                    <div className="flex lg:justify-between md:justify-between sm:flex-col">
                         <div>
                             <div className="flex my-3">
                                 <Image src={'/assets/Union.svg'} alt="Portfolio Logo" width={10}
