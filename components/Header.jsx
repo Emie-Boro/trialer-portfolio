@@ -5,9 +5,13 @@ import Link from "next/link"
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false)
+
+    const handleClick = () =>{
+        setShowMenu(!showMenu)
+    }
     return (
-        <header className="sm:p-2">
-            <nav className="sm:p-2">
+        <header className="container mx-auto p-5 sm:p-2">
+            <nav className="lg:flex lg:justify-between sm:p-2">
                 <div className="flex justify-between">
                     <div>
                         <div className="flex items-center">
@@ -18,19 +22,11 @@ const Header = () => {
                     <div className="lg:hidden">
                         <button className="" onClick={() => setShowMenu(!showMenu)}>
                             <span className="block bg-primary w-6 h-0.5 mb-1"></span>
-                            <span className="block bg-primary w-6 h-0.5 mb-1"></span>
-                            <span className="block bg-primary w-6 h-0.5"></span>
+                            <span className="block bg-primary w-4 h-0.5 mb-1 active:w-6"></span>
+                            <span className="block bg-primary w-2 h-0.5"></span>
                         </button>
                     </div>
                 </div>
-                {showMenu && (<div className="flex flex-col py-5">
-                    <ul className="flex flex-col">
-                        <li className="mb-3"><Link href={'/'}><span className="text-primary">#</span>Home</Link></li>
-                        <li className="mb-3"><Link href={'/projects'}><span className="text-primary">#</span>projects</Link></li>
-                        <li className="mb-3"><Link href={'/about'}><span className="text-primary">#</span>about-me</Link></li>
-                        <li className="mb-3"><Link href={'/contact'}><span className="text-primary">#</span>contact</Link></li>
-                    </ul>
-                </div>)}
                 <div>
                     <ul className="sm:hidden flex sm:flex-col">
                         <li className="mr-3"><Link href={'/'}><span className="text-primary">#</span>Home</Link></li>
@@ -38,6 +34,14 @@ const Header = () => {
                         <li className="mr-3"><Link href={'/about'}><span className="text-primary">#</span>about-me</Link></li>
                         <li className="mr-3"><Link href={'/contact'}><span className="text-primary">#</span>contact</Link></li>
                     </ul>
+                    {showMenu && (<div className="lg:hidden flex flex-col py-5">
+                        <ul className="flex flex-col">
+                            <li className="mb-3"><Link href={'/'} onClick={handleClick}><span className="text-primary">#</span>Home</Link></li>
+                            <li className="mb-3"><Link href={'/projects'} onClick={handleClick}><span className="text-primary">#</span>projects</Link></li>
+                            <li className="mb-3"><Link href={'/about'} onClick={handleClick}><span className="text-primary">#</span>about-me</Link></li>
+                            <li className="mb-3"><Link href={'/contact'} onClick={handleClick}><span className="text-primary">#</span>contact</Link></li>
+                        </ul>
+                    </div>)}
                 </div>
             </nav>
         </header>
