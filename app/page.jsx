@@ -8,8 +8,8 @@ export default function Home() {
       <div className="flex sm:flex-col justify-between lg:items-center">
         <div className="lg:w-2/3 lg:mr-10">
           <h1 className="text-3xl sm:text-xl">Emiedonmokumo is a <strong className="text-primary">web designer</strong> and <strong className="text-primary">full stack developer</strong></h1>
-          <h4 className="text-sm my-5 sm:text-xs">He crafts responsive websites where technologies meet creativity</h4>
-          <div className="flex sm:text-sm">
+          <h4 className="text-sm my-5 sm:text-lg">He crafts responsive websites where technologies meet creativity</h4>
+          <div className="flex sm:text-lg">
             <Link href={'/contact'} className="border border-primary p-2 hover:bg-primary hover:text-white mr-5">Contact me !!</Link>
             <Link href={''} className="border border-primary p-2 bg-primary text-white hover:bg-background hover:text-gray" download={''}>View Resume</Link>
           </div>
