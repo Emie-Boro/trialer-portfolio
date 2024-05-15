@@ -22,7 +22,7 @@ const Header = () => {
                     <div className="lg:hidden">
                         <button className="" onClick={() => setShowMenu(!showMenu)}>
                             <span className="block bg-primary w-6 h-0.5 mb-1"></span>
-                            <span className={`block bg-primary h-0.5 mb-1 ${showMenu ? 'active:w-6' : 'w-4'}`}></span>
+                            <span className={`block bg-primary h-0.5 mb-1 ${showMenu ? 'w-6' : 'w-4'}`}></span>
                             <span className="block bg-primary w-2 h-0.5"></span>
                         </button>
                     </div>
