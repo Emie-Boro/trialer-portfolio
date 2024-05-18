@@ -10,7 +10,7 @@ const Header = () => {
         setShowMenu(!showMenu)
     }
     return (
-        <header className="p-5 sm:p-2">
+        <header className="p-5 lg:mx-12 sm:p-2">
             <nav className="lg:flex lg:justify-between sm:p-2">
                 <div className="flex justify-between">
                     <div>

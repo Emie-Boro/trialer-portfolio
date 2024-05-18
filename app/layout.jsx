@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${firaCode.className} bg-background text-gray`}>
         <Header />
-        <div className="lg:container mx-auto p-5">{children}</div>
+        <div className="lg:px-16 mx-auto p-5">{children}</div>
         <Footer />
       </body>
     </html>

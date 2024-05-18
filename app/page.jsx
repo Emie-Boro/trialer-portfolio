@@ -11,7 +11,7 @@ export default function Home() {
           <h4 className="text-sm my-5 sm:text-sm">He crafts responsive websites where technologies meet creativity</h4>
           <div className="flex md:text-sm sm:text-sm">
             <Link href={'/contact'} className="border border-primary p-2 hover:bg-primary hover:text-white mr-5">Contact me !!</Link>
-            <Link href={'https://github.com/Emie-Boro'} className="border border-primary p-2 bg-primary text-white hover:bg-background hover:text-gray">View GitHub</Link>
+            <Link href={'https://github.com/Emie-Boro'} className="border border-primary p-2 bg-primary text-white hover:bg-background hover:text-gray" target="_blank">View GitHub</Link>
           </div>
         </div>
         <div className="sm:mt-16 lg:w-2/4 md:w-1/3">
@@ -34,7 +34,7 @@ export default function Home() {
             <h1 className="text-2xl font-semibold text-white md:text-xl sm:text-xl"><span className="text-primary">#</span>projects</h1>
             <Link href={'/projects'} className="hover:text-primary text-lg text-white sm:text-sm">view all</Link>
           </div>
-          <div className="mt-4 flex lg:justify-center flex-wrap sm:flex-col sm:justify-center">
+          <div className="mt-4 flex sm:flex-col sm:justify-center">
             {projectData.slice(0, 3).map(project => (
               <div key={project.id} className="lg:max-w-72 md:max-w-56 border lg:mr-3 md:m-2 sm:mb-5">
                 <Image src={project.image} alt={project.description} width={250} height={20} className="w-fit" />
@@ -59,9 +59,9 @@ export default function Home() {
         <h1 className="text-3xl font-bold text-white md:text-xl sm:text-xl"><span className="text-primary">#</span>skills</h1>
         <div className="flex justify-evenly sm:flex-col sm:justify-center">
           <div className="relative lg:w-1/3 sm:hidden">
-            <Image src={'/assets/frame 31.svg'} alt={'viewbox logo'} width={50} height={20} className="absolute left-16 top-8" />
+            <Image src={'/assets/Frame 31.svg'} alt={'viewbox logo'} width={50} height={20} className="absolute left-16 top-8" />
             <Image src={'/assets/logo-outline.svg'} alt={'viewbox logo'} width={80} height={20} className="absolute right-5 top-16" />
-            <Image src={'/assets/frame 31.svg'} alt={'viewbox logo'} width={40} height={20} className="absolute left-12 -bottom-8" />
+            <Image src={'/assets/Frame 31.svg'} alt={'viewbox logo'} width={40} height={20} className="absolute left-12 -bottom-8" />
           </div>
           <div className="lg:w-96">
             <ul className="flex flex-wrap sm:justify-between">

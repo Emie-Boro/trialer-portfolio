@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <>
             <hr className="mt-12" />
-            <footer className="p-5">
+            <footer className="lg:px-12 p-5">
                 <div className="">
                     <div className="flex lg:justify-between md:justify-between sm:flex-col">
                         <div>
