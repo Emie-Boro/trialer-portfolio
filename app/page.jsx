@@ -34,7 +34,7 @@ export default function Home() {
             <h1 className="text-2xl font-semibold text-white md:text-xl sm:text-xl"><span className="text-primary">#</span>projects</h1>
             <Link href={'/projects'} className="hover:text-primary text-lg text-white sm:text-sm">view all</Link>
           </div>
-          <div className="mt-4 flex sm:flex-col sm:justify-center">
+          <div className="mt-4 flex sm:flex-col justify-center">
             {projectData.slice(0, 3).map(project => (
               <div key={project.id} className="lg:max-w-72 md:max-w-56 border lg:mr-3 md:m-2 sm:mb-5">
                 <Image src={project.image} alt={project.description} width={250} height={20} className="w-fit" />
