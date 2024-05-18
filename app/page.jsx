@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import projectData from "@/components/largeProject";
+import projectData from "@/components/projects";
 
 export default function Home() {
   return (
     <main className="">
-      <div className="flex md:flex-row sm:flex-col justify-between lg:items-center">
-        <div className="lg:w-2/3 md:w-2/3 lg:mr-10 md:mr-5">
+      <div className="flex md:flex-row sm:flex-col justify-between md:justify-center items-center">
+        <div className="lg:w-2/3 md:w-2/4 lg:mr-10 md:mr-5">
           <h1 className="text-3xl md:text-xl sm:text-xl">Emiedonmokumo is a <strong className="text-primary">web designer</strong> and <strong className="text-primary">full stack developer</strong></h1>
           <h4 className="text-sm my-5 sm:text-sm">He crafts responsive websites where technologies meet creativity</h4>
           <div className="flex md:text-sm sm:text-sm">
@@ -14,7 +14,7 @@ export default function Home() {
             <Link href={''} className="border border-primary p-2 bg-primary text-white hover:bg-background hover:text-gray" download={''}>View Resume</Link>
           </div>
         </div>
-        <div className="sm:mt-16 lg:w-2/3 md:w-1/3">
+        <div className="sm:mt-16 lg:w-2/4 md:w-1/3">
           <Image src={'/assets/Group 46.png'} alt="Hero Section Image Logo" width={400} height={10} />
           <p className="my-2 border p-2 text-sm sm:text-xs"><span className="bg-primary px-3 mr-3"></span> Currently working on <strong>Portfolio</strong></p>
         </div>
@@ -26,7 +26,7 @@ export default function Home() {
           <Image src={'/assets/Vector.png'} alt="Quotation Logo" width={20} height={10} className="absolute right-10 -bottom-2 md:w-5 sm:w-4" />
 
           <div className=" absolute lg:w-38 right-0">
-            <h3 className="border-2 lg:p-6 sm:p-3 font-bold text-right md:text-sm md:p-3 sm:text-sm">by Tunde Onakoya</h3>
+            <h3 className="border-2 sm:border lg:p-6 sm:p-3 font-bold text-right md:text-sm md:p-3 sm:text-sm">by Tunde Onakoya</h3>
           </div>
         </div>
         <div className="mt-28">
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="mt-4 flex lg:justify-center flex-wrap sm:flex-col sm:justify-center">
             {projectData.slice(0, 3).map(project => (
-              <div key={project.id} className="lg:max-w-72 md:max-w-48 border lg:mr-3 md:m-2 sm:mb-5">
+              <div key={project.id} className="lg:max-w-72 md:max-w-56 border lg:mr-3 md:m-2 sm:mb-5">
                 <Image src={project.image} alt={project.description} width={250} height={20} className="w-fit" />
                 <ul className="flex flex-wrap border border-primary p-2">
                   {project.stacks.map((item, index) => (
@@ -44,7 +44,11 @@ export default function Home() {
                   ))}
                 </ul>
                 <h1 className="text-2xl border border-primary p-2 md:text-lg sm:text-lg">{project.title}</h1>
-                <button className="m-5"><Link className="p-2 capitalize border border-primary hover:bg-primary hover:text-white md:text-sm" href={project.url} >{project.status}</Link></button>
+                <h5 className="text-sm p-2">{project.description}</h5>
+                <div className="flex justify-between">
+                  <button className="m-5"><Link className="p-2 capitalize border border-primary hover:bg-primary hover:text-white md:text-sm" href={project.url} >{project.status}</Link></button>
+                  <button className="m-5"><Link className="p-2 capitalize border border-primary hover:bg-primary hover:text-white md:text-sm" href={project.github}><i className="bi bi-github"></i></Link></button>
+                </div>
               </div>
             ))}
           </div>
@@ -80,16 +84,16 @@ export default function Home() {
         </div>
       </div>
       {/* Contact */}
-      <div className="mt-20">
+      <div className="mt-12">
         <div className="flex mb-12">
           <h1 className="text-3xl font-bold text-white md:text-xl sm:text-xl"><span className="text-primary">#</span>contact</h1>
         </div>
-        <div className="flex justify-around md:justify-between md:text-sm sm:flex-col sm:text-sm">
-          <div className="lg:w-2/4 md:mr-10">
-            <h1 className="text-justify ">I’m interested in a new role, internship and/or freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</h1>
+        <div className="flex justify-around md:px-12 md:justify-evenly md:text-sm sm:flex-col sm:text-sm">
+          <div className="lg:w-2/4 lg:mr-10 md:mr-10">
+            <h1 className="text-justify">I’m interested in a new role, internship and/or freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</h1>
             <button className="mt-5"><Link className="p-2 capitalize border border-primary hover:bg-primary hover:text-white md:text-sm" href={'/contact'}>Send Message</Link></button>
           </div>
-          <div className="border p-5 lg:w-2/4 md:w-2/4 sm:mt-12">
+          <div className="border p-5 lg:w-2/4 sm:mt-12">
             <h3 className="mb-2 text-white font-semibold">Message me here</h3>
             <div className="hover:text-primary">
               <i className="bi bi-envelope mr-1"></i>boro2dev@gmail.com

@@ -3,7 +3,7 @@ import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-const firaCode = Fira_Code({ subsets: ["latin"] });
+const firaCode = Fira_Code({ subsets: ["latin"], display: 'swap' });
 
 export const metadata = {
   title: "Trialer.js",
@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${firaCode.className} bg-background text-gray`}>
         <Header />
-        <div className="container mx-auto p-5">{children}</div>
+        <div className="lg:container mx-auto p-5">{children}</div>
         <Footer />
       </body>
     </html>
