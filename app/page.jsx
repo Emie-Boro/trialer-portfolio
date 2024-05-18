@@ -11,7 +11,7 @@ export default function Home() {
           <h4 className="text-sm my-5 sm:text-sm">He crafts responsive websites where technologies meet creativity</h4>
           <div className="flex md:text-sm sm:text-sm">
             <Link href={'/contact'} className="border border-primary p-2 hover:bg-primary hover:text-white mr-5">Contact me !!</Link>
-            <Link href={''} className="border border-primary p-2 bg-primary text-white hover:bg-background hover:text-gray" download={''}>View Resume</Link>
+            <Link href={'https://github.com/Emie-Boro'} className="border border-primary p-2 bg-primary text-white hover:bg-background hover:text-gray">View GitHub</Link>
           </div>
         </div>
         <div className="sm:mt-16 lg:w-2/4 md:w-1/3">
